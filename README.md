@@ -2,7 +2,7 @@
 
 This Project is part of [**IBM Hack Challenge 2020**](https://smartinternz.com/ibm-hack-challenge-2020). It is a visualization dashboard Webapp imitating descriptive statistics and summaries of COVID-19 tweets data.
 
-> **All the whereabouts and working of the project and app can be found in [this video](https://drive.google.com/file/d/1_fcEI2Lgpdxhh1asr_BS6phWN94hRJw8/view?usp=sharing).**
+> **All the whereabouts and working of the project and app can be found in [this video](https://drive.google.com/file/d/1_fcEI2Lgpdxhh1asr_BS6phWN94hRJw8/view?usp=sharing) and [this presentation](https://github.com/SmartPracticeschool/SBSPS-Challenge-4564-Sentiment-Analysis-Dashboard-of-COVID-19-tweets/blob/master/rsc/ibmhc2020.pptx).**
 
 <br/>
 
