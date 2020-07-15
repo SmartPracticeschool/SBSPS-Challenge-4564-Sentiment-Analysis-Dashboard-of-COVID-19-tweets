@@ -1,0 +1,549 @@
+/* Table of contents
+––––––––––––––––––––––––––––––––––––––––––––––––––
+- Banner
+- Modal
+- Tabs
+- Main Dashboard Tab
+- Dropdown
+- Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@font-face {
+    font-family: 'rubik';
+    src: url('/assets/fonts/rubik-regular-webfont.woff2') format('woff2'),
+         url('/assets/fonts/rubik-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#app-container * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  background-color: #1A1A1D;
+  /*background-image: linear-gradient(to right, #aa076b, #61045f);*/
+  color: #f3f5f4;
+  font-family: 'rubik', sans-serif;
+  width: 100%;
+  height: 100vh;
+  max-width: 100% !important;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+#big-app-container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 6rem;
+}
+
+.banner {
+  height: fit-content;
+  background-color: #1A1A1D;
+  /*background-image: linear-gradient(to right, #aa076b, #61045f);*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #4B5460;
+  padding: 1rem 10rem;
+  width: 100%;
+}
+
+
+.banner h5 {
+  font-family: 'rubik', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.banner h6 {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.banner button {
+  color: #95969A;
+  margin-right: 10px;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+#banner-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.banner button:hover {
+  color: #92e0d3;
+  border-color: whitesmoke;
+}
+
+.banner Img {
+  height: 3rem;
+  margin: 0px 10px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /*Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1005; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.markdown-container {
+  width: 60vw;
+  margin: 10% auto;
+  padding: 10px 15px;
+  background-color: #2d3038;
+}
+
+.close-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 40px;
+}
+
+.closeButton {
+  padding: 0 15px;
+  font-weight: normal;
+  float: right;
+  height: 100%;
+  border: none;
+  color: Red;
+}
+
+.closeButton:hover {
+  color: #91dfd2;
+}
+
+/* Tabs
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#tabs {
+  width: 100%;
+}
+
+.custom-tabs {
+  background-color: #55078a;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  height: fit-content;
+  cursor: pointer;
+}
+
+#day-tab.custom-tab, #phase-tab.custom-tab {
+  background-color: #161a28;
+  letter-spacing: 1px;
+  color: inherit;
+  border: 0;
+  border-bottom: #1E2130 solid 4px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 18px;
+}
+
+#day-tab.custom-tab--selected, #phase-tab.custom-tab--selected {
+  border-bottom: #91dfd2 solid 4px !important;
+}
+
+#day-tab.custom-tab {
+  margin-right: 3px;
+}
+
+#phase-tab.custom-tab {
+  margin-left: 3px;
+}
+
+.section-banner {
+  color: darkgray;
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #4b5460;
+}
+
+/* Tab1 content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.bg-grey{
+  background-color: #31302F;
+}
+.text-padding{
+  padding: 5px;
+}
+/* Graph Layout ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.div-for-charts{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Graph Control Objects ––––––––––––––––––––––––––––––––––––––––––––––––––*/
+.div-user-controls {
+  padding-left: 55px;
+  padding-top: 64px;
+}
+.div-for-dropdown {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.div-for-slider {
+  width: 97%;
+  text-align: center;
+}
+.logo {
+  height: 35px;
+  padding-bottom: 12px;
+  margin-left: 8px;
+}
+.Select-control, .Select-menu-outer, .Select-multi-value-wrapper, .select-up, .is-open .Select-control {
+  background-color: #1E1E1E;
+  color: white;
+
+}
+
+#bar-selector .Select-multi-value-wrapper{
+  max-height: 82px;
+  overflow-y: auto;
+  margin: 0px 0px -3px 0px;
+}
+
+.Select-control{
+  border: 0.5px solid #dbdbdb44;
+}
+
+.has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label {
+  color: white;
+}
+._dash-app-content {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+.has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label{
+  color: #d8d8d8;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+#date {
+  background-color: #1e1e1e;
+  font-family: "Open Sans";
+  font-weight: 400;
+  color: #dbdbdb;
+  border: 0.5px solid #dbdbdb44;
+}
+
+#date-picker{
+  width: 100%;
+}
+
+._dash-undo-redo {
+  display: none;
+}
+.DateInput.DateInput_1{
+  width: 100%;
+}
+.SingleDatePickerInput__withBorder{
+  border:none;
+}
+
+.DateInput.DateInput_1 {
+  background-color: #1e1e1e;
+}
+
+.SingleDatePickerInput__withBorder {
+  border-radius: 3px;
+  color: #dbdbdb;
+  background: #1e1e1e;
+  background-color: #1e1e1e;
+}
+.SingleDatePickerInput.SingleDatePickerInput_1.SingleDatePickerInput__withBorder.SingleDatePickerInput__withBorder_2 {
+  border: 0.0px solid #dbdbdb;
+  display: block;
+}
+.SingleDatePicker_1 {
+  border: 0.0px solid #dbdbdb;
+  display: block;
+}
+
+.SingleDatePicker_picker, .SingleDatePicker_picker_1, .SingleDatePicker_picker__directionLeft,
+.SingleDatePicker_picker__directionLeft_2{
+  filter:invert(100%);
+}
+
+.totplot {
+  margin-top: 5px;
+  border-top: 5px solid #4B5460;
+  border-bottom: 5px solid #4B5460;
+  width: 100%;
+}
+.daywiseplot {
+  margin-top: 5px;
+  border-bottom: 5px solid #4B5460;
+  width: 100%;
+}
+.scoreplot {
+  margin-top: 5px;
+  border-bottom: 5px solid #4B5460;
+  width: 100%;
+}
+
+/* daystats */
+.daystats {
+  height: fit-content;
+  background-color: #161a28;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #4B5460;
+  padding: 1.6rem;
+  width: 100%;
+}
+
+
+.daystats h3 {
+  font-family: 'rubik', sans-serif;
+  font-weight: 500;
+  line-height: 2.6;
+  font-size: 2.2rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.daystats p {
+  font-family: 'rubik', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: 0.1rem;
+}
+
+/* tab 2 content
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.barplot {
+  margin-top: 5px;
+  border-top: 5px solid #4B5460;
+  border-bottom: 5px solid #4B5460;
+  width: 100%;
+}
+
+#twoplots {
+  margin-top: 5px;
+  border-bottom: 5px solid #4B5460;
+  width: 100%;
+}
+
+.c1 h3 {
+  font-family: 'rubik', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.c2 h3 {
+  font-family: 'rubik', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*Dropdown*/
+
+/* Dropdown
+----------------------------------------------*/
+
+/*Dropdown items*/
+.Select-control, .Select-multi-value-wrapper, .Select-menu-outer div {
+  background-color: #242633;
+}
+
+/*Dropdown items*/
+.Select-control, .Select, .Select-value-label, .Select-clear-zone {
+  color: white;
+}
+
+
+/*Dropdown items*/
+.Select-menu-outer {
+  background-color: #242633;
+  border: 1px solid darkgray !important;
+}
+
+/*Dropdown items*/
+.Select-menu-outer div:hover {
+  background-color: rgba(36, 38, 51, 0.5) !important;
+  cursor: pointer;
+}
+
+/*Dropdown arrow + delete button*/
+.Select-control, .Select-control > span {
+  color: white;
+  background: #242633 !important;
+}
+
+/*Placeholder*/
+.Select.has-value.Select--single > .Select-control .Select-value .Select-value-label, .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  color: white !important;
+}
+
+/*Placeholder*/
+.Select--single > .Select-control .Select-value, .Select-placeholder {
+  /*border: 1px solid darkgray;*/
+  border-radius: 4px;
+  background-color: #242633;
+  cursor: pointer;
+}
+
+
+.Select.is-focused:not(.is-open) > .Select-control {
+  border-color: #91dfd2 !important;
+}
+
+/* phasestats */
+.phasestats {
+  height: fit-content;
+  background-color: #161a28;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid #4B5460;
+  padding: 1rem;
+  width: 100%;
+}
+
+
+.phasestats h3 {
+  font-family: 'rubik', sans-serif;
+  font-weight: 500;
+  line-height: 2;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.phasestats p {
+  font-family: 'rubik', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: 0.1rem;
+}
+
+/* Container
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+#app-container {
+  background: #161a28;
+  margin: 1rem 2rem;
+  max-width: 100%;
+  width: 100%;
+  height: calc(100vh - 10rem - 1px);
+}
+
+#app-content {
+  background: inherit;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles / ipad (Portrait)
+  */
+@media only screen and (max-width: 950px) {
+
+  body {
+    font-size: 1.3rem;
+  }
+
+  #big-app-container {
+    padding: 1rem;
+  }
+
+  .banner {
+    flex-direction: column-reverse;
+    padding: 1rem 0.5rem;
+  }
+
+  #banner-text {
+    text-align: center;
+  }
+
+  .banner h5 {
+    font-size: 1.4rem;
+  }
+
+  .banner h6 {
+    font-size: 1.3rem;
+  }
+
+  #banner-logo button {
+    display: none;
+  }
+
+  .banner Img {
+    height: 3rem;
+    margin: 1rem;
+  }
+
+  #app-container {
+    height: auto;
+  }
+
+  #button-div {
+    display: block;
+    text-align: center;
+  }
+
+  #button-div button {
+    margin: 1rem auto;
+    display: block;
+  }
+
+  #graphs-container {
+    flex: 1;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .daystats {
+    padding: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Display measurement row contents block-level on mobile*/
+  /** Display every row content in block*!*/
+}
+
+@media screen and (max-width: 800px) {
+}
