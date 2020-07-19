@@ -58,7 +58,7 @@ def build_banner():
                     html.Button(
                         id="learn-more-button", children="KNOW MORE ABOUT THE PROJECT", n_clicks=0
                     ),
-                    html.Img(id="logo", src=app.get_asset_url("logo.png")),
+                    html.Img(id="logo", src=app.get_asset_url("Logo.png")),
                 ],
             ),
         ],
