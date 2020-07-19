@@ -6,7 +6,7 @@ This Project is part of [**IBM Hack Challenge 2020**](https://smartinternz.com/i
 
 <br/>
 
-**Webapp is deployed on IBM cloud and can be found [here]().**
+**Webapp is deployed [here](https://covid-sent-dashboard.herokuapp.com/).**
  
 <br/>
 
@@ -38,7 +38,7 @@ This Project is part of [**IBM Hack Challenge 2020**](https://smartinternz.com/i
 
 * Make sure you have Python3 on your path.
 * Clone the repository 
-  > `git clone https://github.com/SmartPracticeschool/SBSPS-Challenge-4564-Sentiment-Analysis-Dashboard-of-COVID-19-tweets.git`.
+  > `git clone https://github.com/SmartPracticeschool/SBSPS-Challenge-4564-Sentiment-Analysis-Dashboard-of-COVID-19-tweets.git`
 1. (optional) create and activate new virtualenv or conda env:
 
 ```
